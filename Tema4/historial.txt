@@ -1,0 +1,254 @@
+    1  Jan/24 - 12:59:37 ls
+    2  Jan/24 - 12:59:37 clear
+    3  Jan/24 - 12:59:37 pwd
+    4  Jan/24 - 12:59:37 cd ~
+    5  Jan/24 - 12:59:37 cd ..
+    6  Jan/24 - 12:59:37 cd ~
+    7  Jan/24 - 12:59:37 pwd
+    8  Jan/24 - 12:59:37 font
+    9  Jan/24 - 12:59:37 clear
+   10  Jan/24 - 12:59:37 cd ..
+   11  Jan/24 - 12:59:37 ls
+   12  Jan/24 - 12:59:37 cd ..
+   13  Jan/24 - 12:59:37 ls
+   14  Jan/24 - 12:59:37 cd Alumno
+   15  Jan/24 - 12:59:37 cd Users
+   16  Jan/24 - 12:59:37 cd Alumno/
+   17  Jan/24 - 12:59:37 ls
+   18  Jan/24 - 12:59:37 cd Desktop/
+   19  Jan/24 - 12:59:37 mkdir repositorioActualEntornos
+   20  Jan/24 - 12:59:37 cd repositorioActualEntornos/
+   21  Jan/24 - 12:59:37 git 
+   22  Jan/24 - 12:59:37 git config --global user.name "Bruno"
+   23  Jan/24 - 12:59:37 git config --global user.email b.juste@fp.safavalladolid.com
+   24  Jan/24 - 12:59:37 git config --list
+   25  Jan/24 - 12:59:37 nano
+   26  Jan/24 - 12:59:37 cat comentario.txt 
+   27  Jan/24 - 12:59:37 ls -a
+   28  Jan/24 - 12:59:37 git init
+   29  Jan/24 - 12:59:37 ls -a
+   30  Jan/24 - 12:59:37 ls -la
+   31  Jan/24 - 12:59:37 git status
+   32  Jan/24 - 12:59:37 git add comentario.txt 
+   33  Jan/24 - 12:59:37 git add comentario.txt 
+   34  Jan/24 - 12:59:37 git status
+   35  Jan/24 - 12:59:37 git commit comentario.txt 
+   36  Jan/24 - 12:59:37 cat comentario.txt 
+   37  Jan/24 - 12:59:37 git status
+   38  Jan/24 - 12:59:37 nano comentario.txt 
+   39  Jan/24 - 12:59:37 cat comentario.txt
+   40  Jan/24 - 12:59:37 get status
+   41  Jan/24 - 12:59:37 git status
+   42  Jan/24 - 12:59:37 nano comentario2.txt
+   43  Jan/24 - 12:59:37 git status
+   44  Jan/24 - 12:59:37 git add
+   45  Jan/24 - 12:59:37 git add comentario.txt 
+   46  Jan/24 - 12:59:37 git add comentario2.txt 
+   47  Jan/24 - 12:59:37 git status
+   48  Jan/24 - 12:59:37 git commit -m "segundo commit"
+   49  Jan/24 - 12:59:37 git log
+   50  Jan/24 - 12:59:37 cat comentario
+   51  Jan/24 - 12:59:37 cat comentario.txt 
+   52  Jan/24 - 12:59:37 git log
+   53  Jan/24 - 12:59:37 git status
+   54  Jan/24 - 12:59:37 git checkout comentario.txt
+   55  Jan/24 - 12:59:37 nano comentario.txt 
+   56  Jan/24 - 12:59:37 git checkout comentario.txt
+   57  Jan/24 - 12:59:37 cat comentario.txt 
+   58  Jan/24 - 12:59:37 git reset comentario
+   59  Jan/24 - 12:59:37 git reset comentario.txt
+   60  Jan/24 - 12:59:37 cat comentario
+   61  Jan/24 - 12:59:37 cat comentario.txt 
+   62  Jan/24 - 12:59:37 git init
+   63  Jan/24 - 12:59:37 ls -la
+   64  Jan/24 - 12:59:37 git log
+   65  Jan/24 - 12:59:37 cd Desktop
+   66  Jan/24 - 12:59:37 ls
+   67  Jan/24 - 12:59:37 ls -la
+   68  Jan/24 - 12:59:37 ls -la
+   69  Jan/24 - 12:59:37 cd repositorioActualEntornos/
+   70  Jan/24 - 12:59:37 ls
+   71  Jan/24 - 12:59:37 ls -la
+   72  Jan/24 - 12:59:37 cd .git
+   73  Jan/24 - 12:59:37 ls
+   74  Jan/24 - 12:59:37 cd..
+   75  Jan/24 - 12:59:37 cd ..
+   76  Jan/24 - 12:59:37 ls
+   77  Jan/24 - 12:59:37 git log
+   78  Jan/24 - 12:59:37 download
+   79  Jan/24 - 12:59:37 git log
+   80  Jan/24 - 12:59:37 git -m 
+   81  Jan/24 - 12:59:37 git --help
+   82  Jan/24 - 12:59:37 ls
+   83  Jan/24 - 12:59:37 cd Desktop/
+   84  Jan/24 - 12:59:37 ls
+   85  Jan/24 - 12:59:37 git log
+   86  Jan/24 - 12:59:37 log
+   87  Jan/24 - 12:59:37 gitlog
+   88  Jan/24 - 12:59:37 clear
+   89  Jan/24 - 12:59:37 ls
+   90  Jan/24 - 12:59:37 cd repositorioActualEntornos/
+   91  Jan/24 - 12:59:37 git log
+   92  Jan/24 - 12:59:37 git tag segundo commit
+   93  Jan/24 - 12:59:37 ls -la
+   94  Jan/24 - 12:59:37 git log
+   95  Jan/24 - 12:59:37 git branch nuevaRama
+   96  Jan/24 - 12:59:37 ls
+   97  Jan/24 - 12:59:37 ls -la
+   98  Jan/24 - 12:59:37 switch
+   99  Jan/24 - 12:59:37 git switch
+  100  Jan/24 - 12:59:37 git branch nuevaRama
+  101  Jan/24 - 12:59:37 git switch nuevaRama
+  102  Jan/24 - 12:59:37 touch nuevo.txt
+  103  Jan/24 - 12:59:37 git status
+  104  Jan/24 - 12:59:37 git add nuevo.txt 
+  105  Jan/24 - 12:59:37 git status
+  106  Jan/24 - 12:59:37 git commit -m commit rama nueva
+  107  Jan/24 - 12:59:37 git commit -m "commit rama nueva"
+  108  Jan/24 - 12:59:37 git log
+  109  Jan/24 - 12:59:37 git status
+  110  Jan/24 - 12:59:37 git switch master 
+  111  Jan/24 - 12:59:37 git log
+  112  Jan/24 - 12:59:37 cd Desktop/
+  113  Jan/24 - 12:59:37 ls
+  114  Jan/24 - 12:59:37 ls -la
+  115  Jan/24 - 12:59:37 cd repositorioActualEntornos/
+  116  Jan/24 - 12:59:37 git add comentario.txt
+  117  Jan/24 - 12:59:37 git commit -m "first commit"
+  118  Jan/24 - 12:59:37 git branch -M main
+  119  Jan/24 - 12:59:37 git remote add origin https://github.com/bjuste/Entornos-Clase.git
+  120  Jan/24 - 12:59:37 git push -u origin main
+  121  Jan/24 - 12:59:37 git merge nuevaRama 
+  122  Jan/24 - 12:59:37 git log
+  123  Jan/24 - 12:59:37 git remote add origin https://github.com/bjuste/Entornos-Clase.git
+  124  Jan/24 - 12:59:37 git push -u origin main
+  125  Dec/11 - 08:34:59 export HISTTIMEFORMAT = '%F %T :'
+  126  Dec/11 - 08:35:12 export HISTTIMEFORMAT = '%F %T : '
+  127  Dec/11 - 08:35:28 ls
+  128  Dec/11 - 08:35:31 ls -la
+  129  Dec/11 - 08:35:46 cd Desktop/
+  130  Dec/11 - 08:35:48 ls
+  131  Dec/11 - 08:35:52 export HISTTIMEFORMAT = '%F %T : '
+  132  Dec/11 - 08:36:00 export HISTTIMEFORMAT = "%F %T : "
+  133  Dec/11 - 08:36:03 history
+  134  Dec/11 - 08:37:20 export HISTTIMEFORMAT="%F %T :"
+  135  Dec/11 - 08:37:22 history
+  136  Jan/24 - 12:59:37 ls -la
+  137  Jan/24 - 12:59:37 cd Desktop/
+  138  Jan/24 - 12:59:37 cd SubidasGit/
+  139  Jan/24 - 12:59:37 git init
+  140  Jan/24 - 12:59:37 ls
+  141  Jan/24 - 12:59:37 [200~echo "# EjerciciosT4" >> README.md
+  142  Jan/24 - 12:59:37   git push -u origin main
+  143  Jan/24 - 12:59:37 git add README.md
+  144  Jan/24 - 12:59:37 git commit -m "first commit"
+  145  Jan/24 - 12:59:37 git branch -M main
+  146  Jan/24 - 12:59:37 git remote add origin https://github.com/bjuste/EjerciciosT4.git
+  147  Jan/24 - 12:59:37 git push -u origin main
+  148  Jan/24 - 12:59:37 git status
+  149  Jan/24 - 12:59:37 git add Ejercicio4_1.sql 
+  150  Jan/24 - 12:59:37 git status
+  151  Jan/24 - 12:59:37 git commit -m "Ejercicio 1 Tema 4"
+  152  Jan/24 - 12:59:37 git status
+  153  Jan/24 - 12:59:37 git add Ejercicio4_1.sql 
+  154  Jan/24 - 12:59:37 git commit -m "Ejercicio 1 Tema 4"
+  155  Jan/24 - 12:59:37 git remote add origin https://github.com/bjuste/EjerciciosT4.git
+  156  Jan/24 - 12:59:37 git push -u origin main
+  157  Jan/24 - 12:59:37 LS
+  158  Jan/24 - 12:59:37 CD Desktop/
+  159  Jan/24 - 12:59:37 ls
+  160  Jan/24 - 12:59:37 cd Desktop/
+  161  Jan/24 - 12:59:37 ls
+  162  Jan/24 - 12:59:37 cd repositorioActualEntornos/
+  163  Jan/24 - 12:59:37 ls
+  164  Jan/24 - 12:59:37 git init
+  165  Jan/24 - 12:59:37 cd ..
+  166  Jan/24 - 12:59:37 cd SubidasGit/
+  167  Jan/24 - 12:59:37 cd Desktop/
+  168  Jan/24 - 12:59:37 ls
+  169  Jan/24 - 12:59:37 cd SubidasGit/
+  170  Jan/24 - 12:59:37 ls
+  171  Jan/24 - 12:59:37 git add Ejercicio4_4.sql 
+  172  Jan/24 - 12:59:37 git add Ejercicio4_6.sql 
+  173  Jan/24 - 12:59:37 git commit
+  174  Jan/24 - 12:59:37 git push
+  175  Jan/24 - 12:59:37 git status
+  176  Jan/24 - 12:59:37 git add .
+  177  Jan/24 - 12:59:37 git commit
+  178  Jan/24 - 12:59:37 git commit
+  179  Jan/24 - 12:59:37 git push https://github.com/bjuste/EjerciciosT4.git 
+  180  Jan/24 - 12:59:37 git pull 
+  181  Jan/24 - 12:59:37 git init
+  182  Jan/24 - 12:59:37 git push -u origin master
+  183  Jan/24 - 12:59:37 git push -u origin main
+  184  Jan/24 - 12:59:37 git push https://github.com/bjuste/EjerciciosT4.git 
+  185  Jan/24 - 12:59:37 git push -u origin main
+  186  Jan/24 - 12:59:37 git commit Ejercicio4_4.sql 
+  187  Jan/24 - 12:59:37 git commit Ejercicio4_4.sql 
+  188  Jan/24 - 12:59:37 git commit Ejercicio4_4.sql 
+  189  Jan/24 - 12:59:37 git push -u origin main
+  190  Jan/24 - 12:59:37 git status
+  191  Jan/24 - 12:59:37 git commit -m "Ejercicios 4.4, 4.5 y 4.6"
+  192  Jan/24 - 12:59:37 git push -u origin main
+  193  Jan/24 - 12:59:37 cd Desktop
+  194  Jan/24 - 12:59:37 ls
+  195  Jan/24 - 12:59:37 cd SubidasGit/
+  196  Jan/24 - 12:59:37 git add Ejercicio4_7.sql 
+  197  Jan/24 - 12:59:37 git commit Ejercicio4_7.sql 
+  198  Jan/24 - 12:59:37 git push
+  199  Jan/24 - 12:59:37 cd Desktop/
+  200  Jan/24 - 12:59:37 cd SubidasGit/
+  201  Jan/24 - 12:59:37 ls
+  202  Jan/24 - 12:59:37 git add  Ejercicio4_8.sql 
+  203  Jan/24 - 12:59:37 git commit Ejercicio4_8.sql 
+  204  Jan/24 - 12:59:37 git push
+  205  Jan/24 - 12:59:37 cd Desktop/
+  206  Jan/24 - 12:59:37 cd SubidasGit/
+  207  Jan/24 - 12:59:37 git add  Ejercicio4_8.sql 
+  208  Jan/24 - 12:59:37 git commit Ejercicio4_8.sql 
+  209  Jan/24 - 12:59:37 git push
+  210  Jan/24 - 12:59:37 cd Desktop/
+  211  Jan/24 - 12:59:37 cd SubidasGit/
+  212  Jan/24 - 12:59:37 git add Ejercicio4_9.sql 
+  213  Jan/24 - 12:59:37 cd Desktop/
+  214  Jan/24 - 12:59:37 cd SubidasGit/
+  215  Jan/24 - 12:59:37 git add Prueba1.sql 
+  216  Jan/24 - 12:59:37 git commit
+  217  Jan/24 - 12:59:37 git push
+  218  Jan/24 - 12:59:37 CD Desktop/
+  219  Jan/24 - 12:59:37 cd Desktop
+  220  Jan/24 - 12:59:37 cd SubidasGit/
+  221  Jan/24 - 12:59:37 git add Ejercicio4_8_secuencias.sql 
+  222  Jan/24 - 12:59:37 git add Ejercicio4_10.sql 
+  223  Jan/24 - 12:59:37 git add Ejercicio4_6.32.sql 
+  224  Jan/24 - 12:59:37 git commit Ejercicio4_8_secuencias.sql 
+  225  Jan/24 - 12:59:37 git push Ejercicio4_8_secuencias.sql
+  226  Jan/24 - 12:59:37 git push Ejercicio4_8_secuencias.sql
+  227  Jan/24 - 12:59:37 git commit Ejercicio4_8_secuencias.sql 
+  228  Jan/24 - 12:59:37 git commit Ejercicio4_6.32.sql 
+  229  Jan/24 - 12:59:37 git push Ejercicio4_6.32.sql 
+  230  Jan/24 - 12:59:37 git status
+  231  Jan/24 - 12:59:37 git add Ejercicio4_10.sql 
+  232  Jan/24 - 12:59:37 git commit Ejercicio4_10.sql 
+  233  Jan/24 - 12:59:37 git push Ejercicio4_10.sql
+  234  Jan/24 - 12:59:37 git push -u origin main
+  235  Jan/24 - 12:59:39 cd Desktop/
+  236  Jan/24 - 12:59:41 cd SubidasGit/
+  237  Jan/24 - 12:59:50 git add Ejercicio4_8_secuencias.sql 
+  238  Jan/24 - 12:59:54 git commit 
+  239  Jan/24 - 13:00:31 git push -u main
+  240  Jan/24 - 13:00:42 git push -u origin main
+  241  Jan/24 - 13:03:24 git add Ejercicio4_8_secuencias.sql 
+  242  Jan/24 - 13:03:26 git commit 
+  243  Jan/24 - 13:04:00 git push -u origin main
+  244  Jan/24 - 13:08:53 [200~export HISTTIMEFORMAT= ‘%F %T : ’~
+  245  Jan/24 - 13:08:57 export HISTTIMEFORMAT= ‘%F %T : ’~
+  246  Jan/24 - 13:09:07 export HISTTIMEFORMAT= ‘%F%T:’
+  247  Jan/24 - 13:09:10 export HISTTIMEFORMAT=‘%F%T:’
+  248  Jan/24 - 13:09:19 export HISTTIMEFORMAT=‘ %F %T : ’
+  249  Jan/24 - 13:09:30 history
+  250  Jan/24 - 13:10:04 export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
+  251  Jan/24 - 13:10:10 histor
+  252  Jan/24 - 13:10:12 history
+  253  Jan/24 - 13:10:45 history > historial.docx
+  254  Jan/24 - 13:11:13 history > historial.txt
