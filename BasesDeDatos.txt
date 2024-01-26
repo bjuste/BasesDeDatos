@@ -1,0 +1,3 @@
+Bruno Juste
+
+Este es un fichero para configurar el directorio de bases de datos
