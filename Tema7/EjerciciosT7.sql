@@ -2,7 +2,7 @@ CREATE OR REPLACE TYPE TCODPOSTAL AS OBJECT(
     LOCALIDAD NUMBER(3),
     PROVINCIA NUMBER(2),
     MEMBER PROCEDURE inicializarCodPostal(LOCALIDAD NUMBER, PROVINCIA NUMBER)
-);
+)NOT FINAL;
 
 CREATE OR REPLACE TYPE TDOMICILIO AS OBJECT(
     TIPODEVIA VARCHAR2(50),
@@ -116,6 +116,155 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE(datUno.FECHA_NACIMIENTO);
 END;
 
+/*Ejemplo*/
+SET SERVEROUTPUT ON;
+CREATE TYPE persona AS OBJECT (
+    nombre VARCHAR2(20),
+    apellidos VARCHAR2(30)
+)NOT FINAL;
+
+CREATE TYPE usuariopersona UNDER persona(
+    login VARCHAR2(30),
+    f_ingreso DATE,
+    credito NUMBER
+);
+DECLARE
+    ul usuariopersona;
+BEGIN
+    ul := NEW usuariopersona('Pedro', 'Picapiedra', 'PPica', '01/01/2002', 150);
+    dbms_output.put_line(ul.nombre);
+END;
+
 /*EJERCICIO 4*/
 
+CREATE OR REPLACE TYPE persona AS OBJECT(
+    dni VARCHAR2(9),
+    nombre VARCHAR2(30),
+    apellidos VARCHAR2(30),
+    f_nacimiento DATE,
+    MEMBER FUNCTION muestraEdad RETURN NUMBER
+);
+CREATE OR REPLACE TYPE BODY persona AS
+MEMBER FUNCTION muestraEdad RETURN NUMBER IS
+        edad NUMBER;
+    BEGIN
+        edad := EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM self.f_nacimiento);
+        RETURN edad;
+    END muestraEdad;
+END;
+
+/*EJERCICIO 5*/
+
+DROP TYPE BODY persona;
+DROP TYPE persona;
+ALTER TYPE PERSONA COMPILE;
+
+CREATE OR REPLACE TYPE persona AS OBJECT(
+    dni VARCHAR2(9),
+    nombre VARCHAR2(30),
+    apellidos VARCHAR2(30),
+    f_nacimiento DATE,
+    MEMBER FUNCTION muestraEdad RETURN NUMBER,
+    CONSTRUCTOR FUNCTION persona(dni VARCHAR2, nombre VARCHAR2, apellidos VARCHAR2, f_nacimiento DATE)
+    RETURN SELF AS RESULT
+);
+
+CREATE OR REPLACE TYPE BODY persona AS
+    CONSTRUCTOR FUNCTION persona (
+        dni VARCHAR2,
+        nombre VARCHAR2,
+        apellidos VARCHAR2,
+        f_nacimiento DATE
+    ) RETURN SELF AS RESULT IS
+    BEGIN
+        SELF.dni := dni;
+        SELF.nombre := nombre;
+        SELF.apellidos := apellidos;
+        SELF.f_nacimiento := f_nacimiento;
+        RETURN;
+    END;
+    
+    MEMBER FUNCTION muestraEdad RETURN NUMBER IS
+        edad NUMBER;
+    BEGIN
+        edad := EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM self.f_nacimiento);
+        RETURN edad;
+    END muestraEdad;
+END;
+
+DECLARE
+    trabajador persona;
+    edad NUMBER;
+BEGIN
+    trabajador := persona('123456789', 'Juan', 'Pérez', TO_DATE('1985-05-15', 'YYYY-MM-DD'));
+
+    edad := trabajador.muestraEdad;
+
+    DBMS_OUTPUT.PUT_LINE('Nombre: ' || trabajador.nombre);
+    DBMS_OUTPUT.PUT_LINE('Edad: ' || edad);
+END;
+
+/*EJERCICIO 6*/
+
+CREATE OR REPLACE TYPE TDATOSPERSONALES AS OBJECT (
+    CODIGO_DP NUMBER(3),
+    NOMBRE_COMPLETO TNOMBRECOMPLETO,
+    DOMICILIO TDOMICILIO,
+    CODIGO_POSTAL TCODPOSTAL,
+    FECHA_NACIMIENTO DATE,
+    MEMBER PROCEDURE inicializarDatosPersonales(CODIGO_DP NUMBER, NOMBRE_COMPLETO TNOMBRECOMPLETO, DOMICILIO TDOMICILIO, CODIGO_POSTAL TCODPOSTAL, FECHA_NACIMIENTO DATE)
+)NOT FINAL;
+
+CREATE OR REPLACE TYPE BODY TDATOSPERSONALES AS
+    MEMBER PROCEDURE inicializarDatosPersonales(CODIGO_DP NUMBER, NOMBRE_COMPLETO TNOMBRECOMPLETO, DOMICILIO TDOMICILIO, CODIGO_POSTAL TCODPOSTAL, FECHA_NACIMIENTO DATE) IS
+    BEGIN
+        SELF.CODIGO_DP := CODIGO_DP;
+        SELF.NOMBRE_COMPLETO := NOMBRE_COMPLETO;
+        SELF.DOMICILIO := DOMICILIO;
+        SELF.CODIGO_POSTAL := CODIGO_POSTAL;
+        SELF.FECHA_NACIMIENTO := FECHA_NACIMIENTO;
+    END;
+END;
+
+CREATE TYPE profesor UNDER tdatospersonales (
+    f_incorporacion DATE
+);
+
+CREATE TYPE alumno UNDER tDatosPersonales (
+    calificaciones evaluaciones
+);
+
+CREATE TYPE evaluaciones UNDER tDatosPersonales(
+    evaluacionUno NUMBER,
+    evaluacionDos NUMBER,
+    evaluacionTres NUMBER,
+    evaluacionCuatro NUMBER
+);
+
+/*Ejercicio 7*/
+
+DECLARE
+    profesorUno profesor;
+    alumnoUno alumno;
+BEGIN
+    profesorUno := profesor(
+        101, TNOMBRECOMPLETO('Dolores', 'SANCHEZ', 'GOMEZ'), TDOMICILIO('Plaza', 'España', 103, '1oA'), TCODPOSTAL(28003, 28), DATE '2021-09-01'
+    );
+
+    alumnoUno := alumno(
+        201, TNOMBRECOMPLETO('Luis', 'MARIN', 'SOL'), TDOMICILIO('Calle', 'Laguna', 12, ''), TCODPOSTAL(28660, 28), DATE '2000-01-01', EVALUACIONES(4, 4, 5, 7) 
+    );
+
+    DBMS_OUTPUT.PUT_LINE('Profesor: ');
+    DBMS_OUTPUT.PUT_LINE('Nombre: ' || profesorUno.NOMBRE_COMPLETO.NOMBRE || ' ' || profesorUno.NOMBRE_COMPLETO.PRAPELLIDO || ' ' || profesorUno.NOMBRE_COMPLETO.SGAPELLIDO);
+    DBMS_OUTPUT.PUT_LINE('Fecha de Incorporación: ' || TO_CHAR(profesorUno.F_INCORPORACION, 'DD/MM/YYYY'));
+
+    DBMS_OUTPUT.PUT_LINE('Alumno: ');
+    DBMS_OUTPUT.PUT_LINE('Nombre: ' || alumnoUno.NOMBRE_COMPLETO.NOMBRE || ' ' || alumno_obj.NOMBRE_COMPLETO.PRAPELLIDO || ' ' || alumnoUno.NOMBRE_COMPLETO.SGAPELLIDO);
+    DBMS_OUTPUT.PUT_LINE('Calificaciones:');
+    DBMS_OUTPUT.PUT_LINE('Evaluación 1: ' || alumnoUno.CALIFICACIONES.EVALUACIONUNO);
+    DBMS_OUTPUT.PUT_LINE('Evaluación 2: ' || alumnoUno.CALIFICACIONES.EVALUACIONDOS);
+    DBMS_OUTPUT.PUT_LINE('Evaluación 3: ' || alumnoUno.CALIFICACIONES.EVALUACIONTRES);
+    DBMS_OUTPUT.PUT_LINE('Evaluación 4: ' || alumnoUno.CALIFICACIONES.EVALUACIONCUATRO);
+END;
 
