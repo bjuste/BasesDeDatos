@@ -196,7 +196,7 @@ DECLARE
     trabajador persona;
     edad NUMBER;
 BEGIN
-    trabajador := persona('123456789', 'Juan', 'Pérez', TO_DATE('1985-05-15', 'YYYY-MM-DD'));
+    trabajador := persona('123456789', 'Juan', 'Pï¿½rez', TO_DATE('1985-05-15', 'YYYY-MM-DD'));
 
     edad := trabajador.muestraEdad;
 
@@ -241,6 +241,8 @@ CREATE TYPE evaluaciones UNDER tDatosPersonales(
     evaluacionCuatro NUMBER
 );
 
+
+
 /*Ejercicio 7*/
 
 DECLARE
@@ -248,7 +250,7 @@ DECLARE
     alumnoUno alumno;
 BEGIN
     profesorUno := profesor(
-        101, TNOMBRECOMPLETO('Dolores', 'SANCHEZ', 'GOMEZ'), TDOMICILIO('Plaza', 'España', 103, '1oA'), TCODPOSTAL(28003, 28), DATE '2021-09-01'
+        101, TNOMBRECOMPLETO('Dolores', 'SANCHEZ', 'GOMEZ'), TDOMICILIO('Plaza', 'Espa?a', 103, '1oA'), TCODPOSTAL(28003, 28), DATE '2021-09-01'
     );
 
     alumnoUno := alumno(
@@ -257,14 +259,13 @@ BEGIN
 
     DBMS_OUTPUT.PUT_LINE('Profesor: ');
     DBMS_OUTPUT.PUT_LINE('Nombre: ' || profesorUno.NOMBRE_COMPLETO.NOMBRE || ' ' || profesorUno.NOMBRE_COMPLETO.PRAPELLIDO || ' ' || profesorUno.NOMBRE_COMPLETO.SGAPELLIDO);
-    DBMS_OUTPUT.PUT_LINE('Fecha de Incorporación: ' || TO_CHAR(profesorUno.F_INCORPORACION, 'DD/MM/YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Fecha de Incorporaci?n: ' || TO_CHAR(profesorUno.F_INCORPORACION, 'DD/MM/YYYY'));
 
     DBMS_OUTPUT.PUT_LINE('Alumno: ');
     DBMS_OUTPUT.PUT_LINE('Nombre: ' || alumnoUno.NOMBRE_COMPLETO.NOMBRE || ' ' || alumno_obj.NOMBRE_COMPLETO.PRAPELLIDO || ' ' || alumnoUno.NOMBRE_COMPLETO.SGAPELLIDO);
     DBMS_OUTPUT.PUT_LINE('Calificaciones:');
-    DBMS_OUTPUT.PUT_LINE('Evaluación 1: ' || alumnoUno.CALIFICACIONES.EVALUACIONUNO);
-    DBMS_OUTPUT.PUT_LINE('Evaluación 2: ' || alumnoUno.CALIFICACIONES.EVALUACIONDOS);
-    DBMS_OUTPUT.PUT_LINE('Evaluación 3: ' || alumnoUno.CALIFICACIONES.EVALUACIONTRES);
-    DBMS_OUTPUT.PUT_LINE('Evaluación 4: ' || alumnoUno.CALIFICACIONES.EVALUACIONCUATRO);
+    DBMS_OUTPUT.PUT_LINE('Evaluaci?n 1: ' || alumnoUno.CALIFICACIONES.EVALUACIONUNO);
+    DBMS_OUTPUT.PUT_LINE('Evaluaci?n 2: ' || alumnoUno.CALIFICACIONES.EVALUACIONDOS);
+    DBMS_OUTPUT.PUT_LINE('Evaluaci?n 3: ' || alumnoUno.CALIFICACIONES.EVALUACIONTRES);
+    DBMS_OUTPUT.PUT_LINE('Evaluaci?n 4: ' || alumnoUno.CALIFICACIONES.EVALUACIONCUATRO);
 END;
-
