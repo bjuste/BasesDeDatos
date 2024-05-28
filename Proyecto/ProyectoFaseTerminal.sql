@@ -1,8 +1,13 @@
 Set SERVEROUTPUT ON;
+
+--se han tenido que aÃ±adir estos dos campos a la tabla ticket
+Alter table TICKET ADD precio NUMBER(10,3);
+Alter table TICKET ADD cantidad NUMBER(5);
+
 DECLARE
     vNombreCamarero VARCHAR2(30) := 'javi61';
     vDniTrabajador VARCHAR2(9) := '96884452H';
-    vCodProducto VARCHAR2(100) := '18'; -- Supongamos un código de producto de ejemplo
+    vCodProducto VARCHAR2(100) := '18'; -- Supongamos un cï¿½digo de producto de ejemplo
     vDescuento VARCHAR2(5);
     vTotalDescuento NUMBER;
     vCodigoEmpleado NUMBER;
@@ -36,13 +41,13 @@ END;
     END;
 
     BEGIN
-        -- Validamos si existe el camarero y obtenemos su código de empleado
+        -- Validamos si existe el camarero y obtenemos su cï¿½digo de empleado
         SELECT codEmpleado INTO vCodigoEmpleado 
         FROM Camarero 
         WHERE nombreUsuario = vNombreCamarero;
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
-            dbms_output.put_line('No se encontró ningún camarero con el nombre de usuario especificado.');
+            dbms_output.put_line('No se encontrï¿½ ningï¿½n camarero con el nombre de usuario especificado.');
     END;
 
     BEGIN
@@ -52,7 +57,7 @@ END;
         dbms_output.put_line(vNumeroTicket);
     END;
 
-    -- Convertimos el código de producto a número
+    -- Convertimos el cï¿½digo de producto a nï¿½mero
     vProductoID := TO_NUMBER(vCodProducto);
 
     BEGIN
@@ -110,8 +115,8 @@ END;
             RETURN;
     END;
     
-    -- Mostramos un mensaje indicando que la operación fue exitosa
-    DBMS_OUTPUT.PUT_LINE('Venta realizada con éxito. Número de ticket: ' || vNumeroTicket);
+    -- Mostramos un mensaje indicando que la operaciï¿½n fue exitosa
+    DBMS_OUTPUT.PUT_LINE('Venta realizada con ï¿½xito. Nï¿½mero de ticket: ' || vNumeroTicket);
     DBMS_OUTPUT.PUT_LINE('Descuento aplicado: ' || vTotalDescuento || '%');
     DBMS_OUTPUT.PUT_LINE('Precio final del producto: ' || vPrecioDescuento);
 END;
